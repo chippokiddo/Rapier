@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<addon id="skin.rapier" version="13.0.14" name="Rapier" provider-name="Scarfa, Gade">
+<addon id="skin.rapier" version="13.1.0" name="Rapier" provider-name="Scarfa, Gade">
   <requires>
-    <import addon="xbmc.gui" version="5.15.0"/>
+    <import addon="xbmc.gui" version="5.17.0"/>
     <import addon="script.favourites" version="4.0.9"/>
 	<import addon="script.embuary.helper" version="2.0.2"/>
 	<import addon="resource.images.studios.white" version="0.0.2"/>
