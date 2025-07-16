@@ -7,7 +7,7 @@
 			<onclick>Dialog.Close(1101)</onclick>
 			<include>DropDownMenuCloseHitRect</include>
 		</control>
-		
+
 		<control type="grouplist" id="200">
 			<depth>DepthMenuBar</depth>
 			<left>315</left>
@@ -20,8 +20,11 @@
 			<onleft>Dialog.Close(1101)</onleft>
 			<onright>Dialog.Close(1101)</onright>
 			<include>MenuOpenCloseAnim</include>
-			<animation effect="slide" end="79,0" condition="String.IsEqual(ListItem.DBTYPE,artist) | String.IsEqual(ListItem.DBTYPE,song)">Conditional</animation>
-			<animation effect="slide" end="80,0" condition="!System.AddonIsEnabled(script.libraryeditor)">Conditional</animation>
+			<animation effect="slide" end="79,0"
+				condition="String.IsEqual(ListItem.DBTYPE,artist) | String.IsEqual(ListItem.DBTYPE,song)">
+				Conditional</animation>
+			<animation effect="slide" end="80,0"
+				condition="!System.AddonIsEnabled(script.libraryeditor)">Conditional</animation>
 			<visible>Skin.String(ExtendedInfoDialog,6)</visible>
 			<control type="image" id="780">
 				<width>173</width>
@@ -33,10 +36,14 @@
 				<textwidth>137</textwidth>
 				<include>DropDownMenuBtn</include>
 				<label>$LOCALIZE[31089]</label>
-				<onclick condition="!System.HasAddon(script.embuary.info)">InstallAddon(script.embuary.info)</onclick>
-				<onclick condition="System.HasAddon(script.embuary.info) + !System.AddonIsEnabled(script.embuary.info)">EnableAddon(script.embuary.info)</onclick>
+				<onclick condition="!System.HasAddon(script.embuary.info)">
+					InstallAddon(script.embuary.info)</onclick>
+				<onclick
+					condition="System.HasAddon(script.embuary.info) + !System.AddonIsEnabled(script.embuary.info)">
+					EnableAddon(script.embuary.info)</onclick>
 				<onclick condition="System.AddonIsEnabled(script.embuary.info)">Dialog.Close(1101)</onclick>
-				<onclick condition="System.AddonIsEnabled(script.embuary.info)">RunScript(script.embuary.info,call=person,query='"$INFO[ListItem.Artist]"')</onclick>
+				<onclick condition="System.AddonIsEnabled(script.embuary.info)">
+					RunScript(script.embuary.info,call=person,query='"$INFO[ListItem.Artist]"')</onclick>
 			</control>
 			<!--
 			<control type="button" id="782">
@@ -73,11 +80,18 @@
 				<textwidth>137</textwidth>
 				<include>DropDownMenuBtn</include>
 				<label>$LOCALIZE[20389]</label>
-				<onclick condition="!System.HasAddon(plugin.video.youtube)">InstallAddon(plugin.video.youtube)</onclick>
-				<onclick condition="System.HasAddon(plugin.video.youtube) + !System.AddonIsEnabled(plugin.video.youtube)">EnableAddon(plugin.video.youtube)</onclick>
+				<onclick condition="!System.HasAddon(plugin.video.youtube)">
+					InstallAddon(plugin.video.youtube)</onclick>
+				<onclick
+					condition="System.HasAddon(plugin.video.youtube) + !System.AddonIsEnabled(plugin.video.youtube)">
+					EnableAddon(plugin.video.youtube)</onclick>
 				<onclick condition="System.AddonIsEnabled(plugin.video.youtube)">Dialog.Close(1101)</onclick>
-				<onclick condition="System.AddonIsEnabled(plugin.video.youtube) + String.IsEqual(ListItem.DBTYPE,artist)">Skin.SetString(MusicInfoMenubar,MusicVideosArtist)</onclick>
-				<onclick condition="System.AddonIsEnabled(plugin.video.youtube) + String.IsEqual(ListItem.DBTYPE,album)">Skin.SetString(MusicInfoMenubar,MusicVideosAlbum)</onclick>
+				<onclick
+					condition="System.AddonIsEnabled(plugin.video.youtube) + String.IsEqual(ListItem.DBTYPE,artist)">
+					Skin.SetString(MusicInfoMenubar,MusicVideosArtist)</onclick>
+				<onclick
+					condition="System.AddonIsEnabled(plugin.video.youtube) + String.IsEqual(ListItem.DBTYPE,album)">
+					Skin.SetString(MusicInfoMenubar,MusicVideosAlbum)</onclick>
 			</control>
 			<control type="button" id="786">
 				<description>Search Youtube</description>
@@ -85,19 +99,27 @@
 				<textwidth>137</textwidth>
 				<include>DropDownMenuBtn</include>
 				<label>$LOCALIZE[31092]</label>
-				<onclick condition="!System.HasAddon(plugin.video.youtube)">InstallAddon(plugin.video.youtube)</onclick>
-				<onclick condition="System.HasAddon(plugin.video.youtube) + !System.AddonIsEnabled(plugin.video.youtube)">EnableAddon(plugin.video.youtube)</onclick>
+				<onclick condition="!System.HasAddon(plugin.video.youtube)">
+					InstallAddon(plugin.video.youtube)</onclick>
+				<onclick
+					condition="System.HasAddon(plugin.video.youtube) + !System.AddonIsEnabled(plugin.video.youtube)">
+					EnableAddon(plugin.video.youtube)</onclick>
 				<onclick condition="System.AddonIsEnabled(plugin.video.youtube)">Dialog.Close(1101)</onclick>
-				<onclick condition="System.AddonIsEnabled(plugin.video.youtube)">Dialog.Close(musicinformation)</onclick>
-				<onclick condition="System.AddonIsEnabled(plugin.video.youtube) + String.IsEqual(ListItem.DBTYPE,artist)">ActivateWindow(videos,"plugin://plugin.video.youtube/kodion/search/query/?q=$INFO[ListItem.Artist]/",return)</onclick>
-				<onclick condition="System.AddonIsEnabled(plugin.video.youtube) + String.IsEqual(ListItem.DBTYPE,album)">ActivateWindow(videos,"plugin://plugin.video.youtube/kodion/search/query/?q=$INFO[ListItem.Album]/",return)</onclick>
+				<onclick condition="System.AddonIsEnabled(plugin.video.youtube)">
+					Dialog.Close(musicinformation)</onclick>
+				<onclick
+					condition="System.AddonIsEnabled(plugin.video.youtube) + String.IsEqual(ListItem.DBTYPE,artist)">
+					ActivateWindow(videos,"plugin://plugin.video.youtube/kodion/search/query/?q=$INFO[ListItem.Artist]/",return)</onclick>
+				<onclick
+					condition="System.AddonIsEnabled(plugin.video.youtube) + String.IsEqual(ListItem.DBTYPE,album)">
+					ActivateWindow(videos,"plugin://plugin.video.youtube/kodion/search/query/?q=$INFO[ListItem.Album]/",return)</onclick>
 			</control>
 			<control type="image" id="787">
 				<width>173</width>
 				<include>DropDownMenuBottomBorder</include>
 			</control>
 		</control>
-		
+
 		<control type="grouplist" id="200">
 			<depth>DepthMenuBar</depth>
 			<left>553</left>
@@ -110,9 +132,14 @@
 			<onleft>Dialog.Close(1101)</onleft>
 			<onright>Dialog.Close(1101)</onright>
 			<include>MenuOpenCloseAnim</include>
-			<animation effect="slide" end="-80,0" condition="System.AddonIsEnabled(script.preshowexperience) + [String.IsEqual(ListItem.DBTYPE,movie) | String.IsEqual(ListItem.DBTYPE,tvshow) | String.IsEqual(ListItem.DBTYPE,season) | String.IsEqual(ListItem.DBTYPE,episode)]">Conditional</animation>
-			<animation effect="slide" end="-80,0" condition="System.AddonIsEnabled(plugin.video.specialfeatures) + String.IsEqual(Window(home).Property(SpecialFeatures.Visible),true)">Conditional</animation>
-			<animation effect="slide" end="-80,0" condition="!String.IsEmpty(ListItem.SetID)">Conditional</animation>
+			<animation effect="slide" end="-80,0"
+				condition="System.AddonIsEnabled(script.preshowexperience) + [String.IsEqual(ListItem.DBTYPE,movie) | String.IsEqual(ListItem.DBTYPE,tvshow) | String.IsEqual(ListItem.DBTYPE,season) | String.IsEqual(ListItem.DBTYPE,episode)]">
+				Conditional</animation>
+			<animation effect="slide" end="-80,0"
+				condition="System.AddonIsEnabled(plugin.video.specialfeatures) + String.IsEqual(Window(home).Property(SpecialFeatures.Visible),true)">
+				Conditional</animation>
+			<animation effect="slide" end="-80,0" condition="!String.IsEmpty(ListItem.SetID)">
+				Conditional</animation>
 			<visible>Skin.String(ExtendedInfoDialog,7)</visible>
 			<control type="image" id="790">
 				<width>173</width>
@@ -124,11 +151,18 @@
 				<textwidth>149</textwidth>
 				<include>DropDownMenuBtn</include>
 				<label>$LOCALIZE[31600]</label>
-				<onclick condition="System.AddonIsEnabled(plugin.video.themoviedb.helper)">Dialog.Close(1101)</onclick>
-				<onclick condition="System.AddonIsEnabled(plugin.video.themoviedb.helper)">Skin.SetString(VideoInfoMenubar,Crew)</onclick>
-				<onclick condition="!System.HasAddon(plugin.video.themoviedb.helper)">InstallAddon(plugin.video.themoviedb.helper)</onclick>
-				<onclick condition="System.HasAddon(plugin.video.themoviedb.helper) + !System.AddonIsEnabled(plugin.video.themoviedb.helper)">EnableAddon(plugin.video.themoviedb.helper)</onclick>
-				<visible>String.IsEqual(ListItem.DBTYPE,movie) | String.IsEqual(ListItem.DBTYPE,tvshow) | String.IsEqual(ListItem.DBTYPE,season) | Window.IsVisible(Home)</visible>
+				<onclick condition="System.AddonIsEnabled(plugin.video.themoviedb.helper)">
+					Dialog.Close(1101)</onclick>
+				<onclick condition="System.AddonIsEnabled(plugin.video.themoviedb.helper)">
+					Skin.SetString(VideoInfoMenubar,Crew)</onclick>
+				<onclick condition="!System.HasAddon(plugin.video.themoviedb.helper)">
+					InstallAddon(plugin.video.themoviedb.helper)</onclick>
+				<onclick
+					condition="System.HasAddon(plugin.video.themoviedb.helper) + !System.AddonIsEnabled(plugin.video.themoviedb.helper)">
+					EnableAddon(plugin.video.themoviedb.helper)</onclick>
+				<visible>String.IsEqual(ListItem.DBTYPE,movie) |
+					String.IsEqual(ListItem.DBTYPE,tvshow) | String.IsEqual(ListItem.DBTYPE,season)
+					| Window.IsVisible(Home)</visible>
 			</control>
 			<control type="button" id="792">
 				<description>Movie Set</description>
@@ -159,7 +193,8 @@
 				<label>$LOCALIZE[33054]</label>
 				<onclick>Dialog.Close(1101)</onclick>
 				<onclick>Skin.SetString(VideoInfoMenubar,TVShowSeasons)</onclick>
-				<visible>String.IsEqual(ListItem.DBTYPE,tvshow) | String.IsEqual(ListItem.DBTYPE,season)</visible>
+				<visible>String.IsEqual(ListItem.DBTYPE,tvshow) |
+					String.IsEqual(ListItem.DBTYPE,season)</visible>
 			</control>
 			<control type="button" id="795">
 				<description>Next Up Info</description>
@@ -169,7 +204,8 @@
 				<label>$LOCALIZE[31214]</label>
 				<onclick>Dialog.Close(1101)</onclick>
 				<onclick>Skin.SetString(VideoInfoMenubar,NextUpEpisodes)</onclick>
-				<visible>String.IsEqual(ListItem.DBTYPE,tvshow) | String.IsEqual(ListItem.DBTYPE,season)</visible>
+				<visible>String.IsEqual(ListItem.DBTYPE,tvshow) |
+					String.IsEqual(ListItem.DBTYPE,season)</visible>
 			</control>
 			<control type="button" id="796">
 				<description>Similar Movies / TV Shows</description>
@@ -178,10 +214,15 @@
 				<include>DropDownMenuBtn</include>
 				<label>$VAR[SimilarVideosLabel]</label>
 				<onclick condition="System.AddonIsEnabled(script.embuary.helper)">Dialog.Close(1101)</onclick>
-				<onclick condition="System.AddonIsEnabled(script.embuary.helper)">Skin.SetString(VideoInfoMenubar,SimilarVideos)</onclick>
-				<onclick condition="!System.HasAddon(script.embuary.helper)">InstallAddon(script.embuary.helper)</onclick>
-				<onclick condition="System.HasAddon(script.embuary.helper) + !System.AddonIsEnabled(script.embuary.helper)">EnableAddon(script.embuary.helper)</onclick>
-				<visible>String.IsEqual(ListItem.DBTYPE,movie) | String.IsEqual(ListItem.DBTYPE,set) | String.IsEqual(ListItem.DBTYPE,tvshow) | Window.IsVisible(Home)</visible>
+				<onclick condition="System.AddonIsEnabled(script.embuary.helper)">
+					Skin.SetString(VideoInfoMenubar,SimilarVideos)</onclick>
+				<onclick condition="!System.HasAddon(script.embuary.helper)">
+					InstallAddon(script.embuary.helper)</onclick>
+				<onclick
+					condition="System.HasAddon(script.embuary.helper) + !System.AddonIsEnabled(script.embuary.helper)">
+					EnableAddon(script.embuary.helper)</onclick>
+				<visible>String.IsEqual(ListItem.DBTYPE,movie) | String.IsEqual(ListItem.DBTYPE,set)
+					| String.IsEqual(ListItem.DBTYPE,tvshow) | Window.IsVisible(Home)</visible>
 			</control>
 			<control type="button" id="797">
 				<description>Search Youtube</description>
@@ -190,18 +231,26 @@
 				<include>DropDownMenuBtn</include>
 				<label>$LOCALIZE[31092]</label>
 				<onclick condition="System.AddonIsEnabled(plugin.video.youtube)">Dialog.Close(1101)</onclick>
-				<onclick condition="System.AddonIsEnabled(plugin.video.youtube)">Dialog.Close(movieinformation)</onclick>
-				<onclick condition="System.AddonIsEnabled(plugin.video.youtube) + !String.IsEqual(ListItem.DBTYPE,season)">ActivateWindow(videos,"plugin://plugin.video.youtube/kodion/search/query/?q=$INFO[ListItem.Label]/",return)</onclick>
-				<onclick condition="System.AddonIsEnabled(plugin.video.youtube) + String.IsEqual(ListItem.DBTYPE,season)">ActivateWindow(videos,"plugin://plugin.video.youtube/kodion/search/query/?q=$INFO[ListItem.TVShowTitle] $INFO[ListItem.Label]/",return)</onclick>
-				<onclick condition="!System.HasAddon(plugin.video.youtube)">InstallAddon(plugin.video.youtube)</onclick>
-				<onclick condition="System.HasAddon(plugin.video.youtube) + !System.AddonIsEnabled(plugin.video.youtube)">EnableAddon(plugin.video.youtube)</onclick>
+				<onclick condition="System.AddonIsEnabled(plugin.video.youtube)">
+					Dialog.Close(movieinformation)</onclick>
+				<onclick
+					condition="System.AddonIsEnabled(plugin.video.youtube) + !String.IsEqual(ListItem.DBTYPE,season)">
+					ActivateWindow(videos,"plugin://plugin.video.youtube/kodion/search/query/?q=$INFO[ListItem.Label]/",return)</onclick>
+				<onclick
+					condition="System.AddonIsEnabled(plugin.video.youtube) + String.IsEqual(ListItem.DBTYPE,season)">ActivateWindow(videos,"plugin://plugin.video.youtube/kodion/search/query/?q=$INFO[ListItem.TVShowTitle]
+					$INFO[ListItem.Label]/",return)</onclick>
+				<onclick condition="!System.HasAddon(plugin.video.youtube)">
+					InstallAddon(plugin.video.youtube)</onclick>
+				<onclick
+					condition="System.HasAddon(plugin.video.youtube) + !System.AddonIsEnabled(plugin.video.youtube)">
+					EnableAddon(plugin.video.youtube)</onclick>
 			</control>
 			<control type="image" id="798">
 				<width>173</width>
 				<include>DropDownMenuBottomBorder</include>
 			</control>
 		</control>
-		
+
 		<control type="grouplist" id="200">
 			<depth>DepthMenuBar</depth>
 			<left>1111</left>
@@ -246,7 +295,8 @@
 				<label>$LOCALIZE[24036]</label>
 				<onclick>Dialog.Close(1101)</onclick>
 				<onclick>Skin.SetString(AddonInfoContentToggle,changelog)</onclick>
-				<visible>!String.IsEmpty(Window(Home).Property(Changelog)) + !String.IsEqual(ListItem.AddonNews,Window(Home).Property(Changelog))</visible>
+				<visible>!String.IsEmpty(Window(Home).Property(Changelog)) +
+					!String.IsEqual(ListItem.AddonNews,Window(Home).Property(Changelog))</visible>
 			</control>
 			<control type="button" id="733">
 				<description>Screenshots</description>
