@@ -4,7 +4,7 @@
 
 This is a forked version of Rapier, updated to provide a simple yet clean and elegant interface, focusing on efficiency when browsing your media. This fork specifically targets Kodi 21 "Omega" and enhances the experience with native 1080i resolution support. Important considerations are put on usability, performance, and providing the user with flexibility when it comes to customization. Rapier aims to support all the latest features Kodi has to offer, aligning with the skin's core design goals.
 
-Originally created by scarfa and [Gade](https://github.com/gade01)
+Originally created by Scarfa and [Gade](https://github.com/gade01)
 
 # Documentation
 Documentation for this skin can be found at [official Rapier wiki](https://github.com/gade01/Rapier/wiki).
