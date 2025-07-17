@@ -1,8 +1,9 @@
 ------------------------
-[B]13.2.0 (17-July-25)[/B]
+[B]13.2.1 (17-July-25)[/B]
 ------------------------
 - Revert Favourites script to 8.1.2
 - Revert Studio Icons - White to 0.0.30
+- Revert 1080i to 720p
 
 ------------------------
 [B]13.2.0 (17-July-25)[/B]
